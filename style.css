@@ -2,10 +2,11 @@
 
 body{
 	background-color: #111111;
-    padding-top: 5%;
-    padding-left: 33%;
-    padding-right: 33%;
-    width: 33%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 25%;
+    padding-right: 25%;
+    width: 50%;
     font-size: 125%;
     color: white;
 }
