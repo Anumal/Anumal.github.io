@@ -6,7 +6,7 @@ body{
     padding-bottom: 5vh;
     padding-left: 25vw;
     padding-right: 25vw;
-    width: 50vw;
+    max-width: 50vw;
     font-size: 110%;
     color: #d6d6d6;
 }
