@@ -1,3 +1,5 @@
+## Verhaltensregeln:
+
 ### § 1 Eigenverantwortung
 Ihr seid für eure Taten und Worte selbst verantwortlich. Ihr brecht nicht Blizzards Terms of Service, führt keine unerlaubten Modifikationen am Spiel oder Discord durch, verhaltet euch gesittet und moralisch und vermeidet unnötige Konflikte und Dramen. Insbesondere verleitet ihr nicht dazu - und lasst ihr euch nicht dazu verleiten diese Regeln zu brechen, selbst wenn ein Offizier dies von euch verlangt.
 
