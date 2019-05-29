@@ -11,7 +11,7 @@ Die Offiziere bieten euch einen Service an, den sie mit ihrer eigenen Zeit und M
 ---
 
 ### § 3 Befehlskette
-Der Gildemeister trägt die volle Verantwortung und Befehlsgewalt. Insbesondere überschreibt er jedes andere Urteil. Er ist dem Dienst seiner Gilde verpflichtet und reagiert auf Wünsche und Bitten. Die Offiziere sind eine direkte Erweiterung des Gildemeisters. Ihre Aufgaben sind auf spezielle Teilgebiete fokussiert. Ihnen ist gehorsam folge zu leisten. Jedes Gildemitglied hat das Recht ohne Verspottung angehört zu werden um auf Missstände hinzuweisen und Missverständnisse aufzuklären.
+Der Gildemeister trägt die volle Verantwortung und Befehlsgewalt. Insbesondere überschreibt er jedes andere Urteil. Er ist dem Dienst seiner Gilde verpflichtet und reagiert auf Wünsche und Bitten. Die Offiziere sind eine direkte Erweiterung des Gildemeisters. Ihre Aufgaben sind auf spezielle Teilgebiete fokussiert. Ihnen ist gehorsam Folge zu leisten. Jedes Gildemitglied hat das Recht ohne Verspottung angehört zu werden um auf Missstände hinzuweisen und Missverständnisse aufzuklären.
 
 ---
 
