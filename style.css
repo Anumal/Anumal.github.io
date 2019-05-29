@@ -4,9 +4,9 @@ body{
 	background-color: #111111;
     padding-top: 5vh;
     padding-bottom: 5vh;
-    padding-left: 25%;
-    padding-right: 25%;
-    width: 48%;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    width: 50vw;
     font-size: 110%;
     color: #d6d6d6;
 }
