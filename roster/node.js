@@ -97,6 +97,65 @@ NAMESPACE_Node.LineBreakNode = function() {
 	}
 }
 
+NAMESPACE_Node.TableNode = function() {
+	this.abstractNode = undefined;
+	
+	this.constructor = function(head) {
+		this.abstractNode = new NAMESPACE_Node.AbstractNode();
+		this.abstractNode.getNodeType = this.getNodeType;
+		this.abstractNode.constructor();
+		
+		let tableHeadArray = [];
+		for(let i = 0; i < head.length; i++){
+			let tableHead = document.createElement("th");
+			tableHead.appendChild(document.createTextNode(head[i]));
+			tableHeadArray.push(tableHead);
+		}
+		let tableRow = document.createElement("tr");
+		for(let i = 0; i < tableHeadArray.length; i++){
+			tableRow.appendChild(tableHeadArray[i]);
+		}
+		this.abstractNode.getNode().appendChild(tableRow);
+		
+		let attribute = document.createAttribute("width");
+		attribute.value = "100%";  
+		this.abstractNode.getNode().setAttributeNode(attribute);
+
+		return this;
+	}
+	
+	this.appendToDocument = function(){
+		this.abstractNode.appendToDocument();
+	}
+	
+	this.removeFromDocument = function(){
+		document.body.removeChild(this.getNode());
+	}
+	
+	this.getNodeType = function(){
+		return "table";
+	}
+	
+	this.getNode = function(){
+		return this.abstractNode.getNode();
+	}
+
+	this.addRow = function(row){
+
+		let tableDataArray = [];
+		for(let i = 0; i < row.length; i++){
+			let tableData = document.createElement("td");
+			tableData.appendChild(document.createTextNode(row[i]));
+			tableDataArray.push(tableData);
+		}
+		let tableRow = document.createElement("tr");
+		for(let i = 0; i < tableDataArray.length; i++){
+			tableRow.appendChild(tableDataArray[i]);
+		}
+		this.abstractNode.getNode().appendChild(tableRow);
+	}
+}
+
 NAMESPACE_Node.TextNode = function() {
 	this.abstractNode = undefined;
 	this.child = undefined;
@@ -122,6 +181,82 @@ NAMESPACE_Node.TextNode = function() {
 	
 	this.getNodeType = function(){
 		return "textnode";
+	}
+	
+	this.getNode = function(){
+		return this.abstractNode.getNode();
+	}
+	
+	this.setContent = function(content) {
+		if(content != undefined){
+			this.child.nodeValue = content;
+		}
+	}
+}
+
+NAMESPACE_Node.Heading2Node = function() {
+	this.abstractNode = undefined;
+	this.child = undefined;
+	
+	this.constructor = function(content) {
+		this.abstractNode = new NAMESPACE_Node.AbstractNode();
+		this.abstractNode.getNodeType = this.getNodeType;
+		this.abstractNode.constructor();
+		
+		this.child = document.createTextNode("");
+		this.abstractNode.getNode().appendChild(this.child);
+		
+		this.setContent(content);
+	}
+	
+	this.appendToDocument = function(){
+		this.abstractNode.appendToDocument();
+	}
+	
+	this.removeFromDocument = function(){
+		document.body.removeChild(this.getNode());
+	}
+	
+	this.getNodeType = function(){
+		return "h2";
+	}
+	
+	this.getNode = function(){
+		return this.abstractNode.getNode();
+	}
+	
+	this.setContent = function(content) {
+		if(content != undefined){
+			this.child.nodeValue = content;
+		}
+	}
+}
+
+NAMESPACE_Node.Heading3Node = function() {
+	this.abstractNode = undefined;
+	this.child = undefined;
+	
+	this.constructor = function(content) {
+		this.abstractNode = new NAMESPACE_Node.AbstractNode();
+		this.abstractNode.getNodeType = this.getNodeType;
+		this.abstractNode.constructor();
+		
+		this.child = document.createTextNode("");
+		this.abstractNode.getNode().appendChild(this.child);
+		
+		this.setContent(content);
+	}
+	
+	this.appendToDocument = function(){
+		this.abstractNode.appendToDocument();
+	}
+	
+	this.removeFromDocument = function(){
+		document.body.removeChild(this.getNode());
+	}
+	
+	this.getNodeType = function(){
+		return "h3";
 	}
 	
 	this.getNode = function(){
@@ -189,6 +324,7 @@ NAMESPACE_Node.Page = function() {
 	this.constructor = function() {
 		this.containerNode = new NAMESPACE_Node.ContainerNode();
 		this.containerNode.constructor();
+		return this;
 	}
 	
 	this.appendToDocument = function(){
@@ -199,6 +335,18 @@ NAMESPACE_Node.Page = function() {
 		var textNode = new NAMESPACE_Node.TextNode();
 		textNode.constructor(text);
 		this.containerNode.addChild(textNode);
+	}
+
+	this.addHeading2= function(text){
+		var heading2Node = new NAMESPACE_Node.Heading2Node();
+		heading2Node.constructor(text);
+		this.containerNode.addChild(heading2Node);
+	}
+
+	this.addHeading3= function(text){
+		var heading3Node = new NAMESPACE_Node.Heading3Node();
+		heading3Node.constructor(text);
+		this.containerNode.addChild(heading3Node);
 	}
 	
 	this.addLineBreak = function(){

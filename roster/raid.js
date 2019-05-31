@@ -78,4 +78,4 @@ NAMESPACE_raid.dynamicRaider = [
 
 NAMESPACE_raid.raiderQuantity = 40;
 NAMESPACE_raid.substitutesQuantity = NAMESPACE_raid.constantRaider.length + NAMESPACE_raid.dynamicRaider.length - NAMESPACE_raid.raiderQuantity;
-NAMESPACE_raid.startDate = new Date('2019-05-22');
+NAMESPACE_raid.startDate = new Date('2019-05-15');

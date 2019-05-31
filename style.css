@@ -10,3 +10,41 @@ body{
     font-size: 110%;
     color: #d6d6d6;
 }
+
+a:link {
+color: rgb(42, 147, 218);
+}
+
+a:active {
+    color: rgb(32, 98, 143);
+} 
+
+a:visited {
+color: rgb(15, 64, 92);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1vh;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1vh;
+    background-color: rgb(15, 64, 92);
+}
+
+tr:nth-child(even) {
+    background-color: #111111;
+}
+
+tr:nth-child(odd) {
+    background-color: #111111;
+}
