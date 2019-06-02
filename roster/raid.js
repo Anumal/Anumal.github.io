@@ -73,7 +73,8 @@ NAMESPACE_raid.dynamicRaider = [
     new NAMESPACE_raid.Raider().constructor("Raider43", NAMESPACE_raid.classType.priest),
     new NAMESPACE_raid.Raider().constructor("Raider44", NAMESPACE_raid.classType.priest),
     new NAMESPACE_raid.Raider().constructor("Raider45", NAMESPACE_raid.classType.mage),
-    new NAMESPACE_raid.Raider().constructor("Raider46", NAMESPACE_raid.classType.priest)
+    new NAMESPACE_raid.Raider().constructor("Raider46", NAMESPACE_raid.classType.priest),
+    new NAMESPACE_raid.Raider().constructor("Raider47", NAMESPACE_raid.classType.priest)
 ];
 
 NAMESPACE_raid.raiderQuantity = 40;

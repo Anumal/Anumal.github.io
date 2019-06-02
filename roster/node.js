@@ -6,6 +6,12 @@ NAMESPACE_Node.AbstractNode = function() {
 	this.constructor = function() {
 		this.node = document.createElement(this.getNodeType());
 	}
+
+	this.addAttribute = function(name, value) {
+		let attribute = document.createAttribute(name);
+		attribute.value = value;  
+		this.node.setAttributeNode(attribute);
+	}
 	
 	this.getNodeType = function(){
 		return "abstractnode";
@@ -138,6 +144,18 @@ NAMESPACE_Node.TableNode = function() {
 	
 	this.getNode = function(){
 		return this.abstractNode.getNode();
+	}
+
+	this.setCaption = function(content){
+		let caption = document.createElement("caption");
+		caption.appendChild(document.createTextNode(content));
+		this.abstractNode.getNode().appendChild(caption);
+	}
+
+	this.setHeader = function(content){
+		let header = document.createElement("header");
+		header.appendChild(document.createTextNode(content));
+		this.abstractNode.getNode().appendChild(header);
 	}
 
 	this.addRow = function(row){
