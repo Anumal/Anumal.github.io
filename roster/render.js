@@ -30,6 +30,8 @@ let secondDayFormatted = dd2 + '.' + mm2 + '.' + yyyy2;
 
 let page = new NAMESPACE_Node.Page().constructor();
 
+page.addHeading2("Raid Roster: " + firstDayFormatted + " - " + secondDayFormatted);
+
 let constantRaiderTable = new NAMESPACE_Node.TableNode().constructor(["Raider", "Class"]);
 constantRaiderTable.setCaption("Constant Players:");
 
