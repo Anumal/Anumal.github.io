@@ -1,8 +1,15 @@
 let classNameByType = ["Warrior", "Paladin", "Hunter", "Rogue", "Priest", "Shaman", "Mage", "Warlock", "Druid"];
 
 let currentDate = new Date();
-let firstdayWeek = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay()+3));
-let lastdayWeek = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay()+9));
+currentDate.setDate(new Date().getDate() + 3);
+let firstdayWeek = new Date(currentDate);
+let lastdayWeek = new Date(currentDate);
+firstdayWeek.setDate(firstdayWeek.getDate() - ((firstdayWeek.getDay()+4)%7));   
+if(lastdayWeek.getDay() < 3){
+	lastdayWeek.setDate(lastdayWeek.getDate() + (2 - lastdayWeek.getDay() ));
+} else{
+	lastdayWeek.setDate(lastdayWeek.getDate() + (9 - lastdayWeek.getDay()));
+}
 
 let dd1 = firstdayWeek.getDate();
 let mm1 = firstdayWeek.getMonth() + 1; //January is 0!
@@ -84,4 +91,3 @@ for(let i=entrycount; i < NAMESPACE_raid.dynamicRaider.length; i++){
 page.addChild(activeRaiderTable2);
 
 page.appendToDocument();
-
