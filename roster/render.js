@@ -1,7 +1,6 @@
 let classNameByType = ["Warrior", "Paladin", "Hunter", "Rogue", "Priest", "Shaman", "Mage", "Warlock", "Druid"];
 
 let currentDate = new Date();
-currentDate.setDate(new Date().getDate() + 3);
 let firstdayWeek = new Date(currentDate);
 let lastdayWeek = new Date(currentDate);
 firstdayWeek.setDate(firstdayWeek.getDate() - ((firstdayWeek.getDay()+4)%7));   
