@@ -89,4 +89,4 @@ for(let i=entrycount; i < NAMESPACE_raid.dynamicRaider.length; i++){
 }
 page.addChild(activeRaiderTable2);
 
-page.appendToDocument();
+page.appendToElement("bodycontent");
