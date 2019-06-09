@@ -25,6 +25,10 @@ NAMESPACE_Node.AbstractNode = function() {
 		document.body.appendChild(this.getNode());
 	}
 	
+	this.appendToElement = function(element){
+		document.getElementById(element).appendChild(this.getNode());
+	}
+	
 	this.removeFromDocument = function(){
 		document.body.removeChild(this.getNode());
 	}
@@ -44,6 +48,10 @@ NAMESPACE_Node.ContainerNode = function() {
 	
 	this.appendToDocument = function(){
 		this.abstractNode.appendToDocument();
+	}
+
+	this.appendToElement = function(element){
+		this.abstractNode.appendToElement(element);
 	}
 	
 	this.getNodeType = function(){
@@ -347,6 +355,10 @@ NAMESPACE_Node.Page = function() {
 	
 	this.appendToDocument = function(){
 		this.containerNode.appendToDocument();
+	}
+
+	this.appendToElement = function(element){
+		this.containerNode.appendToElement(element);
 	}
 	
 	this.addText= function(text){
