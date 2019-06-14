@@ -37,11 +37,19 @@ table {
     box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.43);
 }
 
-@media screen and (max-width: 600px) {
-    .table {
-      width: 100%;
+@media screen and (max-width: 500px) {
+    table {
+        float: none;
+        width: 98%;
     }
-  }
+
+    #bodycontent{
+        max-width: 50vw;
+        min-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 caption {
     text-decoration: underline;
