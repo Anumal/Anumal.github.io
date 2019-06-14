@@ -37,6 +37,12 @@ table {
     box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.43);
 }
 
+@media screen and (max-width: 600px) {
+    .table {
+      width: 100%;
+    }
+  }
+
 caption {
     text-decoration: underline;
     font-weight: bold;
