@@ -1,7 +1,8 @@
 @charset "utf-8";
+/* For mobile phones: */
 
 body {
-	background-color: #111111;
+    background-color: #111111;
     font-size: 0.9em;
     color: #d6d6d6;
     margin-top: 5vh;
@@ -10,8 +11,6 @@ body {
 
 
 #bodycontent{
-    max-width: 50vw;
-    min-width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -29,26 +28,12 @@ color: rgb(15, 64, 92);
 }
 
 table {
+    float: none;
+    width: 98%;
     border-collapse: collapse;
-    float: left;
-    width: 48%;
     table-layout: fixed;
     margin: 1%;
     box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.43);
-}
-
-@media screen and (max-width: 500px) {
-    table {
-        float: none;
-        width: 98%;
-    }
-
-    #bodycontent{
-        max-width: 50vw;
-        min-width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 caption {
@@ -76,4 +61,26 @@ tr:hover {
 td {
     text-align: center;
     padding: 0.5vh;
+}
+
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+    #bodycontent{
+        max-width: 50vw;
+        min-width: 400px;
+    }
+
+    table {
+        float: left;
+        width: 48%;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+
 }
