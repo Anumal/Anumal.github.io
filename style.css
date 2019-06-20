@@ -15,6 +15,18 @@ body {
     margin-right: auto;
 }
 
+input{
+    width: 10vw;
+    min-width: 100px;
+    text-align: center; 
+  }
+  input:hover{
+    width:10vw;
+  }
+  input:focus{
+    width:10vw;
+  }
+
 a:link {
 color: rgb(42, 147, 218);
 }
