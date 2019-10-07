@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* For mobile phones: */
+
+body {
+    background-color: #111111;
+    font-size: 0.9em;
+    color: #d6d6d6;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
+#bodycontent{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input{
+    width: 10vw;
+    min-width: 100px;
+    text-align: center; 
+  }
+  input:hover{
+    width:10vw;
+  }
+  input:focus{
+    width:10vw;
+  }
+
+a:link {
+color: rgb(42, 147, 218);
+}
+
+a:active {
+    color: rgb(32, 98, 143);
+} 
+
+a:visited {
+color: rgb(15, 64, 92);
+}
+
+table {
+    float: none;
+    width: 98%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 1%;
+    box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.43);
+}
+
+caption {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: left;
+    font-size: larger;
+    margin: inherit;
+}
+
+th {
+    text-align: center;
+    padding: 0.5vh;
+    background-color: rgba(15, 64, 92, 0.5);
+}
+
+tr{
+    background: linear-gradient(90deg, #202020 0px,#202020 4px,#161616 8px, #161616 100%);
+}
+
+tr:hover {
+    background: rgb(15, 64, 92);
+}
+
+td {
+    text-align: center;
+    padding: 0.5vh;
+}
+
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+    #bodycontent{
+        max-width: 50vw;
+        min-width: 400px;
+    }
+
+    table {
+        float: left;
+        width: 48%;
+    }
+    
+}
+
+@media only screen and (min-width: 1280px) {
+    /* For desktop: */
+
+
+}
