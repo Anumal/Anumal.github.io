@@ -18,18 +18,65 @@ a:visited {
 color: rgb(15, 64, 92);
 }
 
+/* for any device */
+.grid {
+    display : grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "menu"
+    "content"
+    "footer";
+}
+
+.emptyleft {
+    grid-area: emptyleft;
+    background-color: aqua;
+}
+.emptytop {
+    grid-area: emptytop;
+    background-color: aqua;
+}
+.emptyright {
+    grid-area: emptyright;
+    background-color: aqua;
+}
+.emptybottom {
+    grid-area: emptybottom;
+    background-color: aqua;
+}
+
+.header {
+    grid-area: header;
+    background-color: blue;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: green;
+}
+
+.content {
+    grid-area: content;
+    background-color: violet;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: tomato;
+}
+
 
 @media only screen and (min-width: 920px) {
     /* For desktop: */
 
     .grid {
         display : grid;
-        grid-template-columns: 1fr 900px 1fr;
+        grid-template-columns: 200px 1fr 700px 1fr;
         grid-template-areas:
-        "emptyleft header emptyright"
-        "emptyleft menu emptyright"
-        "emptyleft content emptyright"
-        "emptyleft footer emptyright";
+        "header header header header"
+        "menu emptyleft content emptyright"
+        "footer footer footer footer";
     }
     
     .emptyleft {
@@ -51,17 +98,21 @@ color: rgb(15, 64, 92);
 
     .header {
         grid-area: header;
+        background-color: blue;
     }
     
     .menu {
         grid-area: menu;
+        background-color: green;
     }
     
     .content {
         grid-area: content;
+        background-color: violet;
     }
     
     .footer {
         grid-area: footer;
+        background-color: tomato;
     }
 }
